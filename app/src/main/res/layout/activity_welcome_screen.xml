@@ -37,8 +37,9 @@
 
             <TextView
                 android:id="@+id/main_screen_long_text"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_vertical"/>
 
         </ScrollView>
 
