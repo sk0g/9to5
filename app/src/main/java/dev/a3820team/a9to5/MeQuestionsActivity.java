@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MeQuestionsActivity extends AppCompatActivity {
 
     RadioGroup[] mAnswerRadioGroups = new RadioGroup[13];
 
