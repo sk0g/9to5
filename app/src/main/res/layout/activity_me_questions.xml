@@ -12,7 +12,8 @@
         android:paddingTop="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#EDEDED">
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,7 +49,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -99,7 +100,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -150,7 +151,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -201,7 +202,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -252,7 +253,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -303,7 +304,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -354,7 +355,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -405,7 +406,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -456,7 +457,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -507,7 +508,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -558,7 +559,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -609,7 +610,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -660,7 +661,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/customborder"
+                    android:background="@drawable/shadow_18441"
                     android:orientation="vertical"
                     android:layout_marginBottom="10dp">
 
@@ -708,16 +709,18 @@
 
             </LinearLayout>
 
+                <Button
+                    android:id="@+id/activity_me_submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shadow_18441"
+                    android:text="@string/submit_button_text"/>
+
             </LinearLayout>
 
         </ScrollView>
 
-        <Button
-            android:id="@+id/activity_me_submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/submit_button_text"/>
 
     </LinearLayout>
 
