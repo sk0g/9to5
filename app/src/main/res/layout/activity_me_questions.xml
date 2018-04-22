@@ -136,6 +136,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -143,6 +145,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -150,6 +154,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -188,6 +194,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -195,6 +203,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -202,6 +212,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                         </RadioGroup>
@@ -235,11 +247,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q4_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -247,6 +261,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -254,6 +270,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -287,11 +305,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q5_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -299,6 +319,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -306,6 +328,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -339,11 +363,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q6_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -351,6 +377,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -358,6 +386,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -391,11 +421,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q7_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -403,6 +435,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -410,6 +444,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -443,11 +479,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q8_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -455,6 +493,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -462,6 +502,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -495,11 +537,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q9_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -507,6 +551,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -514,6 +560,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -547,11 +595,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q10_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -559,6 +609,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -566,6 +618,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -599,11 +653,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q11_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -611,6 +667,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -618,6 +676,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -651,11 +711,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q12_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -663,6 +725,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -670,6 +734,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -703,11 +769,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q13_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -715,6 +783,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -722,6 +792,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -755,11 +827,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q14_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -767,6 +841,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -774,6 +850,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -807,11 +885,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q15_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -819,6 +899,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -826,6 +908,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -859,11 +943,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q16_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -871,6 +957,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -878,6 +966,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -911,11 +1001,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q17_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -923,6 +1015,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -930,6 +1024,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -963,11 +1059,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q18_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -975,6 +1073,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -982,6 +1082,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -1015,11 +1117,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q19_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -1027,6 +1131,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -1034,6 +1140,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
@@ -1067,11 +1175,13 @@
                         android:orientation="horizontal"
                         android:paddingBottom="2dp">
 
-                    <RadioButton
+                        <RadioButton
                             android:id="@+id/q20_o1"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_1"
                             android:text="@string/_1"/>
 
                         <RadioButton
@@ -1079,6 +1189,8 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_2"
                             android:text="@string/_2"/>
 
                         <RadioButton
@@ -1086,19 +1198,36 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            style="@style/RadioButton"
+                            android:background="@drawable/radio_background_3"
                             android:text="@string/_3"/>
 
                     </RadioGroup>
 
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/activity_me_submit_button"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/shadow_18441"
-                    android:text="@string/submit_button_text"/>
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/activity_me_previous_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_18441"
+                        android:text="@string/previous_button_text"/>
+
+                    <Button
+                        android:id="@+id/activity_me_next_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_18441"
+                        android:text="@string/next_button_text"
+                        android:layout_marginStart="15dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
