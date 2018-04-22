@@ -12,15 +12,28 @@
         android:paddingTop="48dp"
         android:paddingBottom="24dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/me_results_box"
+        
+        <RelativeLayout
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/rectangle"
-            android:gravity="center"
-            android:textSize="40sp" />
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/me_results_drawable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rectangle"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/me_results_box"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:text="abc"/>
+
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/me_fortune_type"

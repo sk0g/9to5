@@ -2,8 +2,10 @@ package dev.a3820team.a9to5;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
@@ -41,7 +43,9 @@ public class MeResultsActivity extends AppCompatActivity {
         }
 
         mResultBox.setTextColor(colour);
-        mResultBox.setBackgroundColor(colour);
+
+        ImageView drawRectangle = findViewById(R.id.me_results_drawable);
+        drawRectangle.setColorFilter(colour);
     }
 
     private void getTotalMeScore() {
