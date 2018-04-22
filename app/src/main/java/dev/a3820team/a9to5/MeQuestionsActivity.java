@@ -70,20 +70,32 @@ public class MeQuestionsActivity extends AppCompatActivity {
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastScore();
+                showResults();
             }
         });
+        }
+
+    void showResults() {
+        boolean allQuestionsAnswered = updateScores();
+
+        if (!allQuestionsAnswered) {
+            Toast.makeText(MeQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
+            addListenersToRadioGroups();
+        } else {
+            
+        }
     }
 
-    void toastScore() {
-        boolean containsZero = updateScores();
+    private void addListenersToRadioGroups() {
+        for (int rg_num : mRadioGroupID) {
+            RadioGroup rg = findViewById(rg_num);
 
-        if (containsZero) {
-            Toast.makeText(MeQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
-        } else {
-            int sum = 0;
-            for (int i : mSelectedOptions) { sum += i; }
-            Toast.makeText(MeQuestionsActivity.this, Integer.toString(sum), Toast.LENGTH_LONG).show();
+            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                    updateScores();
+                }
+            });
         }
     }
 
@@ -111,15 +123,15 @@ public class MeQuestionsActivity extends AppCompatActivity {
     void updateTextColours() {
         for (int i = 0; i < mQuestionAmount; i++) {
             TextView tv = findViewById(mQuestionTextViews[i]);
-            int colour;
+            int newTextColour;
 
             if (mSelectedOptions[i] == -1) {
-                colour = getResources().getColor(R.color.colorDangerRed);
+                newTextColour = getResources().getColor(R.color.colorDangerRed);
             } else {
-                colour = getResources().getColor(android.R.color.primary_text_light);
+                newTextColour = getResources().getColor(android.R.color.primary_text_light);
             }
 
-            tv.setTextColor(colour);
+            tv.setTextColor(newTextColour);
         }
     }
 }
