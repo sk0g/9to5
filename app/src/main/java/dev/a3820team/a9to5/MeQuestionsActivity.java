@@ -1,5 +1,8 @@
 package dev.a3820team.a9to5;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MeQuestionsActivity extends AppCompatActivity {
+
+    public static final String ME_PREFS_NAME = "dev.a3820team.a9to5.me_questions";
 
     Button mSubmitButton;
     final int[] mRadioGroupID = {
@@ -57,7 +62,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
             R.id.me_question_20
     };
 
-    int mQuestionAmount = mRadioGroupID.length;
+    public final int mQuestionAmount = mRadioGroupID.length;
 
     int[] mSelectedOptions = new int[mQuestionAmount];
 
@@ -73,7 +78,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
                 showResults();
             }
         });
-        }
+    }
 
     void showResults() {
         boolean allQuestionsAnswered = updateScores();
@@ -82,7 +87,42 @@ public class MeQuestionsActivity extends AppCompatActivity {
             Toast.makeText(MeQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
             addListenersToRadioGroups();
         } else {
-            
+            saveResults();
+            switchToResultsActivity();
+        }
+    }
+
+    private void switchToResultsActivity() {
+        Intent resultIntent = new Intent(this, MeResultsActivity.class);
+        startActivity(resultIntent);
+    }
+
+    private void saveResults() {
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
+                ME_PREFS_NAME, Context.MODE_PRIVATE
+        );
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        String key;
+
+        for (int i = 0; i < mQuestionAmount; i++) {
+            key = "me" + (i + 1);
+            editor.putInt(key, mSelectedOptions[i]);
+        }
+
+        editor.apply();
+    }
+
+
+    private void loadResults() {
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
+                ME_PREFS_NAME, Context.MODE_PRIVATE
+        );
+
+        if (sharedPref.contains("me1")) {
+            return;
+        } else {
+            return;
         }
     }
 

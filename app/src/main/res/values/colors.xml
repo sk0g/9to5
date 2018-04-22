@@ -9,4 +9,5 @@
     <color name="customYellow">#FFFF44</color>
     <color name="colorDangerRed">#EA2212</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorBackgroundGray">#EDEDED</color>
 </resources>

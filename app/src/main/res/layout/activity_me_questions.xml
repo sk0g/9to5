@@ -13,7 +13,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:orientation="vertical"
-        android:background="#EDEDED">
+        android:background="@color/colorBackgroundGray">
 
         <TextView
             android:layout_width="wrap_content"

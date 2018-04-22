@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MeQuestionsActivity" />
+        <activity android:name=".MeResultsActivity" />
     </application>
 
 </manifest>
