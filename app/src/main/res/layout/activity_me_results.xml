@@ -30,7 +30,8 @@
                 android:id="@+id/me_results_box"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:textSize="40sp"
+                android:textSize="60sp"
+                android:textStyle="bold"
                 android:text="abc"/>
 
         </RelativeLayout>
@@ -39,18 +40,52 @@
             android:id="@+id/me_fortune_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:textAlignment="center"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/me_result_short"
+            android:id="@+id/me_results"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:minLines="2"
+            android:lineSpacingMultiplier="1.25"/>
 
         <TextView
-            android:id="@+id/me_results_long"
+            android:id="@+id/me_results_question"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:minLines="2"
+            android:lineSpacingMultiplier="1.25"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/activity_me_results_previous_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shadow_18441"
+                android:text="@string/previous_button_text"/>
+
+            <Button
+                android:id="@+id/activity_me_results_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shadow_18441"
+                android:text="@string/next_button_text"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
