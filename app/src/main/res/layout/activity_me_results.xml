@@ -45,27 +45,41 @@
             android:textAlignment="center"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/me_results"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:minLines="2"
-            android:lineSpacingMultiplier="1.25"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/me_results_question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minLines="2"
-            android:lineSpacingMultiplier="1.25"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/me_results"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:minLines="2"
+                        android:lineSpacingMultiplier="1.25"/>
+
+                    <TextView
+                        android:id="@+id/me_results_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minLines="2"
+                        android:lineSpacingMultiplier="1.25"/>
+
+                </LinearLayout>
+
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_weight="1">
+            android:layout_weight=".4">
 
             <Button
                 android:id="@+id/activity_me_results_previous_button"
@@ -85,7 +99,6 @@
                 android:layout_marginStart="15dp"/>
 
         </LinearLayout>
-
 
     </LinearLayout>
 
