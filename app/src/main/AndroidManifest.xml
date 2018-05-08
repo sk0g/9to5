@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MeQuestionsActivity" />
+        <activity android:name=".MeQuestionsActivity"
+            android:theme="@style/CustomColourSCheme" />
         <activity android:name=".MeResultsActivity" />
     </application>
 

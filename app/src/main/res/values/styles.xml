@@ -18,5 +18,9 @@
         <item name="android:paddingTop">4dp</item>
     </style>
 
+    <style name="CustomColourSCheme" parent="AppTheme" >
+        <item name="android:colorBackground">@color/colorBackground</item>
+    </style>
+
 
 </resources>
