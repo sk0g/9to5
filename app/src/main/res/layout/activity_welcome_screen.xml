@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDEDED">
+    android:theme="@style/CustomColourScheme">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,8 +52,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/shadow_18441"
-            android:text="@string/start_button_label"/>
+            android:minWidth="120dp"
+            android:background="@drawable/shadow_95831"
+            android:text="@string/start_button_label"
+            android:textColor="@color/colorBackground"/>
 
     </LinearLayout>
 

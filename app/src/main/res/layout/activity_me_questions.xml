@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dev.a3820team.a9to5.MeQuestionsActivity">
+    tools:context="dev.a3820team.a9to5.MeQuestionsActivity"
+    android:theme="@style/CustomColourScheme">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -12,28 +13,7 @@
         android:paddingTop="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:orientation="vertical"
-        android:background="@color/colorBackgroundGray">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/me_title"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:text="@string/me_subtitle"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:text="@string/me_scoring"/>
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -45,6 +25,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/me_title"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/me_subtitle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/me_scoring"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1379,18 +1380,21 @@
 
             <Button
                 android:id="@+id/activity_me_previous_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shadow_18441"
-                android:text="@string/button_label_start_over"/>
+                android:layout_weight="1"
+                android:background="@drawable/shadow_95831"
+                android:text="@string/button_label_start_over"
+                android:textColor="@color/colorBackground"/>
 
             <Button
                 android:id="@+id/activity_me_next_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shadow_18441"
+                android:layout_weight="1"
+                android:background="@drawable/shadow_95831"
                 android:text="@string/next_button_text"
-                android:layout_marginStart="15dp"/>
+                android:textColor="@color/colorBackground"/>
 
         </LinearLayout>
 

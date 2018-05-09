@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MeQuestionsActivity"
-            android:theme="@style/CustomColourSCheme" />
+            android:theme="@style/CustomColourScheme" />
         <activity android:name=".MeResultsActivity" />
     </application>
 
