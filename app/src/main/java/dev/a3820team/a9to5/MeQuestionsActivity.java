@@ -174,7 +174,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
             if (mSelectedOptions[i] == -1) {
                 newTextColour = getResources().getColor(R.color.colorDangerRed);
             } else {
-                newTextColour = getResources().getColor(android.R.color.primary_text_light);
+                newTextColour = getResources().getColor(R.color.colorText);
             }
 
             tv.setTextColor(newTextColour);
