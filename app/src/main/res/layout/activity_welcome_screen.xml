@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:minWidth="120dp"
-            android:background="@drawable/shadow_95831"
+            android:background="@drawable/drawable_high_emphasis"
             android:text="@string/start_button_label"
             android:textColor="@color/colorBackground"/>
 

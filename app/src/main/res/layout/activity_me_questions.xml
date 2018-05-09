@@ -1384,16 +1384,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/shadow_95831"
+                android:background="@drawable/drawable_low_emphasis"
                 android:text="@string/button_label_start_over"
-                android:textColor="@color/colorBackground"/>
+                android:textColor="@color/colorButton"/>
 
             <Button
                 android:id="@+id/activity_me_next_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/shadow_95831"
+                android:background="@drawable/drawable_high_emphasis"
                 android:text="@string/next_button_text"
                 android:textColor="@color/colorBackground"/>
 
