@@ -77,27 +77,28 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_weight=".4">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/activity_me_results_previous_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_gravity="bottom"
-                android:background="@drawable/shadow_18441"
-                android:text="@string/previous_button_text"/>
+                android:background="@drawable/drawable_low_emphasis"
+                android:text="@string/previous_button_text"
+                android:textColor="@drawable/button_text_color"/>
 
             <Button
                 android:id="@+id/activity_me_results_next_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_gravity="bottom"
-                android:background="@drawable/shadow_18441"
+                android:background="@drawable/drawable_high_emphasis"
                 android:text="@string/next_button_text"
-                android:layout_marginStart="15dp"/>
+                android:textColor="@color/colorWhite"/>
 
         </LinearLayout>
 
