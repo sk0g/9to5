@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
         android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:orientation="vertical">
@@ -1377,13 +1377,13 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="bottom">
 
             <Button
                 android:id="@+id/activity_me_previous_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:background="@drawable/drawable_low_emphasis"
                 android:text="@string/button_label_start_over"
                 android:textColor="@color/colorButton"/>
@@ -1392,7 +1392,7 @@
                 android:id="@+id/activity_me_next_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:background="@drawable/drawable_high_emphasis"
                 android:text="@string/next_button_text"
                 android:textColor="@color/colorBackground"/>
