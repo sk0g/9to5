@@ -21,7 +21,7 @@ public class OrgResultsActivity extends AppCompatActivity {
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_org_questions);
+        setContentView(R.layout.activity_org_results);
 
         getTotalOrgScore();
         displayResults();
@@ -33,14 +33,14 @@ public class OrgResultsActivity extends AppCompatActivity {
         mPreviousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchToMeQuiz();
+                switchToOrgQuiz();
             }
         });
         mNextButton     = (Button) findViewById(R.id.activity_org_results_next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchToOrgQuiz();
+                switchToFinalResults();
             }
         });
 
@@ -65,13 +65,13 @@ public class OrgResultsActivity extends AppCompatActivity {
         }
 
         if (mTotalScore <= 30) {
-            resultTextID = R.string.me_fortune_very_low_text;
+            resultTextID = R.string.org_fortune_very_low_text;
         } else if (mTotalScore <= 40) {
-            resultTextID = R.string.me_fortune_low_text;
+            resultTextID = R.string.org_fortune_low_text;
         } else if (mTotalScore <= 50) {
-            resultTextID = R.string.me_fortune_medium_text;
+            resultTextID = R.string.org_fortune_medium_text;
         } else {
-            resultTextID = R.string.me_fortune_high_text;
+            resultTextID = R.string.org_fortune_high_text;
         }
 
         mFortuneType.setText(getResources().getString(fortuneBoxTitleID));
@@ -85,9 +85,9 @@ public class OrgResultsActivity extends AppCompatActivity {
         drawRectangle.setColorFilter(colour);
     }
 
-    private void switchToMeQuiz() {
-        Intent quizIntent = new Intent(this, MeQuestionsActivity.class);
-        startActivity(quizIntent);
+    private void switchToFinalResults() {
+//        Intent quizIntent = new Intent(this, MeQuestionsActivity.class);
+//        startActivity(quizIntent);
     }
 
     private void switchToOrgQuiz() {
@@ -102,7 +102,7 @@ public class OrgResultsActivity extends AppCompatActivity {
 
         String key;
         for (int i = 0; i > -1; i++) {
-            key = "me" + (i + 1);
+            key = "org" + (i + 1);
             if (sharedPref.contains(key)) {
                 mTotalScore += sharedPref.getInt(key, 0);
             } else {

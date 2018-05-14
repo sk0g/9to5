@@ -92,7 +92,7 @@ public class OrgQuestionsActivity extends AppCompatActivity {
             addListenersToRadioGroups();
         } else {
             saveResults();
-//            switchToResultsActivity();
+            switchToResultsActivity();
         }
     }
 
@@ -104,10 +104,13 @@ public class OrgQuestionsActivity extends AppCompatActivity {
         saveResults();
     }
 
-//    private void switchToResultsActivity() {
-//        Intent resultIntent = new Intent(this, MeResultsActivity.class);
-//        startActivity(resultIntent);
-//    }
+    private void switchToResultsActivity() {
+        Intent resultIntent = new Intent(this, OrgResultsActivity.class);
+        startActivity(resultIntent);
+
+        updateScores();
+        saveResults();
+    }
 
     private void saveResults() {
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(

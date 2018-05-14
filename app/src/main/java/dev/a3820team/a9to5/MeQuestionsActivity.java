@@ -109,8 +109,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
 
         SharedPreferences.Editor editor = sharedPref.edit();
         String key;
-
-        editor.clear();
+        
         for (int i = 0; i < mQuestionAmount; i++) {
             key = "me" + (i + 1);
             editor.putInt(key, mSelectedOptions[i]);
