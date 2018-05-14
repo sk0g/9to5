@@ -17,11 +17,11 @@ public class OrgQuestionsActivity extends AppCompatActivity {
 
     Button mSubmitButton, mPreviousButton;
     final int[] mRadioGroupID = {
-            R.id.me_radio_group_1,  R.id.me_radio_group_2,  R.id.me_radio_group_3,  R.id.me_radio_group_4,
-            R.id.me_radio_group_5,  R.id.me_radio_group_6,  R.id.me_radio_group_7,  R.id.me_radio_group_8,
-            R.id.me_radio_group_9,  R.id.me_radio_group_10, R.id.me_radio_group_11, R.id.me_radio_group_12,
-            R.id.me_radio_group_13, R.id.me_radio_group_14, R.id.me_radio_group_15, R.id.me_radio_group_16,
-            R.id.me_radio_group_17, R.id.me_radio_group_18, R.id.me_radio_group_19, R.id.me_radio_group_20
+            R.id.org_radio_group_1,  R.id.org_radio_group_2,  R.id.org_radio_group_3,  R.id.org_radio_group_4,
+            R.id.org_radio_group_5,  R.id.org_radio_group_6,  R.id.org_radio_group_7,  R.id.org_radio_group_8,
+            R.id.org_radio_group_9,  R.id.org_radio_group_10, R.id.org_radio_group_11, R.id.org_radio_group_12,
+            R.id.org_radio_group_13, R.id.org_radio_group_14, R.id.org_radio_group_15, R.id.org_radio_group_16,
+            R.id.org_radio_group_17, R.id.org_radio_group_18, R.id.org_radio_group_19, R.id.org_radio_group_20
     };
 
     final int[] mQuestionTextViews = {
@@ -117,19 +117,6 @@ public class OrgQuestionsActivity extends AppCompatActivity {
         }
 
         editor.apply();
-    }
-
-
-    private void loadResults() {
-        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
-                ME_PREFS_NAME, Context.MODE_PRIVATE
-        );
-
-        if (sharedPref.contains("me1")) {
-            return;
-        } else {
-            return;
-        }
     }
 
     private void addListenersToRadioGroups() {
