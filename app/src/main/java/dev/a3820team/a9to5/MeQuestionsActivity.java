@@ -119,19 +119,6 @@ public class MeQuestionsActivity extends AppCompatActivity {
         editor.apply();
     }
 
-
-    private void loadResults() {
-        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
-                ME_PREFS_NAME, Context.MODE_PRIVATE
-        );
-
-        if (sharedPref.contains("me1")) {
-            return;
-        } else {
-            return;
-        }
-    }
-
     private void addListenersToRadioGroups() {
         for (int rg_num : mRadioGroupID) {
             RadioGroup rg = findViewById(rg_num);

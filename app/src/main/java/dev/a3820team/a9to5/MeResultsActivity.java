@@ -37,7 +37,13 @@ public class MeResultsActivity extends AppCompatActivity {
             }
         });
         mNextButton     = (Button) findViewById(R.id.activity_me_results_next_button);
-        // TODO: Listener to switch to next quiz activity
+        mNextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchToOrgQuiz();
+            }
+        });
+
 
         mResultBox      = (TextView) findViewById(R.id.me_results_box);
         mFortuneType    = (TextView) findViewById(R.id.me_fortune_type);
@@ -81,6 +87,11 @@ public class MeResultsActivity extends AppCompatActivity {
 
     private void switchToMeQuiz() {
         Intent quizIntent = new Intent(this, MeQuestionsActivity.class);
+        startActivity(quizIntent);
+    }
+
+    private void switchToOrgQuiz() {
+        Intent quizIntent = new Intent(this, OrgQuestionsActivity.class);
         startActivity(quizIntent);
     }
 

@@ -25,11 +25,11 @@ public class OrgQuestionsActivity extends AppCompatActivity {
     };
 
     final int[] mQuestionTextViews = {
-            R.id.me_question_1,  R.id.me_question_2,  R.id.me_question_3,  R.id.me_question_4,
-            R.id.me_question_5,  R.id.me_question_6,  R.id.me_question_7,  R.id.me_question_8,
-            R.id.me_question_9,  R.id.me_question_10, R.id.me_question_11, R.id.me_question_12,
-            R.id.me_question_13, R.id.me_question_14, R.id.me_question_15, R.id.me_question_16,
-            R.id.me_question_17, R.id.me_question_18, R.id.me_question_19, R.id.me_question_20
+            R.id.org_question_1,  R.id.org_question_2,  R.id.org_question_3,  R.id.org_question_4,
+            R.id.org_question_5,  R.id.org_question_6,  R.id.org_question_7,  R.id.org_question_8,
+            R.id.org_question_9,  R.id.org_question_10, R.id.org_question_11, R.id.org_question_12,
+            R.id.org_question_13, R.id.org_question_14, R.id.org_question_15, R.id.org_question_16,
+            R.id.org_question_17, R.id.org_question_18, R.id.org_question_19, R.id.org_question_20
     };
 
     public final int mQuestionAmount = mRadioGroupID.length;
@@ -39,11 +39,11 @@ public class OrgQuestionsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_me_questions);
+        setContentView(R.layout.activity_org_questions);
 
         attemptLoadingResults();
 
-        mSubmitButton = (Button) findViewById(R.id.activity_me_next_button);
+        mSubmitButton = (Button) findViewById(R.id.activity_org_next_button);
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,18 +51,13 @@ public class OrgQuestionsActivity extends AppCompatActivity {
             }
         });
 
-        mPreviousButton = (Button) findViewById(R.id.activity_me_previous_button);
+        mPreviousButton = (Button) findViewById(R.id.activity_org_previous_button);
         mPreviousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startQuizOver();
+                switchToPreviousActivity();
             }
         });
-    }
-
-    private void startQuizOver() {
-        Intent startQuizOverIntent = new Intent(this, WelcomeActivity.class);
-        startActivity(startQuizOverIntent);
     }
 
     private void attemptLoadingResults() {
@@ -73,7 +68,7 @@ public class OrgQuestionsActivity extends AppCompatActivity {
         String key;
         int checked, radioButtonID;
         for (int i = 0; i > -1; i++) {
-            key = "me" + (i + 1);
+            key = "org" + (i + 1);
             if (sharedPref.contains(key)) {
                 checked = sharedPref.getInt(key, 0);
                 RadioGroup rg = findViewById(mRadioGroupID[i]);
@@ -86,21 +81,26 @@ public class OrgQuestionsActivity extends AppCompatActivity {
     }
 
     void showResults() {
-        boolean allQuestionsAnswered = updateScores();
-
-        if (!allQuestionsAnswered) {
-            Toast.makeText(OrgQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
-            addListenersToRadioGroups();
-        } else {
-            saveResults();
-            switchToResultsActivity();
-        }
+//        boolean allQuestionsAnswered = updateScores();
+//
+//        if (!allQuestionsAnswered) {
+//            Toast.makeText(OrgQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
+//            addListenersToRadioGroups();
+//        } else {
+//            saveResults();
+//            switchToResultsActivity();
+//        }
     }
 
-    private void switchToResultsActivity() {
+    void switchToPreviousActivity() {
         Intent resultIntent = new Intent(this, MeResultsActivity.class);
         startActivity(resultIntent);
     }
+
+//    private void switchToResultsActivity() {
+//        Intent resultIntent = new Intent(this, MeResultsActivity.class);
+//        startActivity(resultIntent);
+//    }
 
     private void saveResults() {
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
@@ -112,7 +112,7 @@ public class OrgQuestionsActivity extends AppCompatActivity {
 
         editor.clear();
         for (int i = 0; i < mQuestionAmount; i++) {
-            key = "me" + (i + 1);
+            key = "org" + (i + 1);
             editor.putInt(key, mSelectedOptions[i]);
         }
 
