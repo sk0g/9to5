@@ -72,8 +72,12 @@ public class OrgQuestionsActivity extends AppCompatActivity {
             if (sharedPref.contains(key)) {
                 checked = sharedPref.getInt(key, 0);
                 RadioGroup rg = findViewById(mRadioGroupID[i]);
-                radioButtonID = rg.getChildAt(checked - 1).getId();
-                rg.check(radioButtonID);
+                // Checked gets assigned a 0 in case a question is not answered, which causes issues
+                // when attempting to load the checked options back
+                if (checked > 0) {
+                    radioButtonID = rg.getChildAt(checked - 1).getId();
+                    rg.check(radioButtonID);
+                }
             } else {
                 break;
             }
@@ -81,20 +85,23 @@ public class OrgQuestionsActivity extends AppCompatActivity {
     }
 
     void showResults() {
-//        boolean allQuestionsAnswered = updateScores();
-//
-//        if (!allQuestionsAnswered) {
-//            Toast.makeText(OrgQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
-//            addListenersToRadioGroups();
-//        } else {
-//            saveResults();
+        boolean allQuestionsAnswered = updateScores();
+
+        if (!allQuestionsAnswered) {
+            Toast.makeText(OrgQuestionsActivity.this, "Some questions remain unanswered", Toast.LENGTH_LONG).show();
+            addListenersToRadioGroups();
+        } else {
+            saveResults();
 //            switchToResultsActivity();
-//        }
+        }
     }
 
     void switchToPreviousActivity() {
         Intent resultIntent = new Intent(this, MeResultsActivity.class);
         startActivity(resultIntent);
+
+        updateScores();
+        saveResults();
     }
 
 //    private void switchToResultsActivity() {
@@ -110,7 +117,6 @@ public class OrgQuestionsActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         String key;
 
-        editor.clear();
         for (int i = 0; i < mQuestionAmount; i++) {
             key = "org" + (i + 1);
             editor.putInt(key, mSelectedOptions[i]);
