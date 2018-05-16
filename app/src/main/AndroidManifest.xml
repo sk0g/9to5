@@ -28,7 +28,10 @@
         <activity
             android:name=".OrgResultsActivity"
             android:theme="@style/CustomColourScheme" />
-        <activity android:name=".FinalResultActivity"></activity>
+        <activity
+            android:name=".FinalResultActivity"
+            android:theme="@style/CustomColourScheme"/>
+
     </application>
 
 </manifest>
