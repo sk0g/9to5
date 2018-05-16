@@ -1,5 +1,6 @@
 package dev.a3820team.a9to5;
 
+import android.content.res.Resources;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +16,8 @@ public class FinalResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_final_result);
 
         mTopSemiCircle    = (ImageView) findViewById(R.id.final_result_top_semi_circle);
-        mTopSemiCircle.setColorFilter(R.color.customYellow);
+        mTopSemiCircle.setColorFilter(getResources().getColor(R.color.customYellow));
         mBottomSemiCircle = (ImageView) findViewById(R.id.final_result_bottom_semi_circle);
-        mBottomSemiCircle.setColorFilter(R.color.customGreen);
+        mBottomSemiCircle.setColorFilter(getResources().getColor(R.color.customGreen));
     }
 }

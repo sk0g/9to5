@@ -86,8 +86,8 @@ public class OrgResultsActivity extends AppCompatActivity {
     }
 
     private void switchToFinalResults() {
-//        Intent quizIntent = new Intent(this, MeQuestionsActivity.class);
-//        startActivity(quizIntent);
+        Intent quizIntent = new Intent(this, FinalResultActivity.class);
+        startActivity(quizIntent);
     }
 
     private void switchToOrgQuiz() {
