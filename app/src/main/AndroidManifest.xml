@@ -12,18 +12,23 @@
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MeQuestionsActivity"
+        <activity
+            android:name=".MeQuestionsActivity"
             android:theme="@style/CustomColourScheme" />
-        <activity android:name=".MeResultsActivity"
-            android:theme="@style/CustomColourScheme"/>
-
-        <activity android:name=".OrgQuestionsActivity"
-            android:theme="@style/CustomColourScheme"/>
-        <activity android:name=".OrgResultsActivity"
-            android:theme="@style/CustomColourScheme"/>
+        <activity
+            android:name=".MeResultsActivity"
+            android:theme="@style/CustomColourScheme" />
+        <activity
+            android:name=".OrgQuestionsActivity"
+            android:theme="@style/CustomColourScheme" />
+        <activity
+            android:name=".OrgResultsActivity"
+            android:theme="@style/CustomColourScheme" />
+        <activity android:name=".FinalResultActivity"></activity>
     </application>
 
 </manifest>
