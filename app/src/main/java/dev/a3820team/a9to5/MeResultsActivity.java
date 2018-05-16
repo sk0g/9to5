@@ -23,7 +23,7 @@ public class MeResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_results);
 
-        getTotalMeScore();
+        mTotalScore = getTotalMeScore(getApplicationContext());
         displayResults();
     }
 
@@ -95,19 +95,22 @@ public class MeResultsActivity extends AppCompatActivity {
         startActivity(quizIntent);
     }
 
-    private void getTotalMeScore() {
-        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
+    private static int getTotalMeScore(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences(
                 ME_PREFS_NAME, Context.MODE_PRIVATE
         );
 
+        int totalScore = 0;
         String key;
         for (int i = 0; i > -1; i++) {
             key = "me" + (i + 1);
             if (sharedPref.contains(key)) {
-                mTotalScore += sharedPref.getInt(key, 0);
+                totalScore += sharedPref.getInt(key, 0);
             } else {
                 break;
             }
         }
+
+        return totalScore;
     }
 }

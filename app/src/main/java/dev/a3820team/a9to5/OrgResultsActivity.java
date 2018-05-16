@@ -23,7 +23,7 @@ public class OrgResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_org_results);
 
-        getTotalOrgScore();
+        mTotalScore = getTotalOrgScore(getApplicationContext());
         displayResults();
     }
 
@@ -95,19 +95,22 @@ public class OrgResultsActivity extends AppCompatActivity {
         startActivity(quizIntent);
     }
 
-    private void getTotalOrgScore() {
-        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
+    private static int getTotalOrgScore(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences(
                 ME_PREFS_NAME, Context.MODE_PRIVATE
         );
 
+        int totalScore = 0;
         String key;
         for (int i = 0; i > -1; i++) {
             key = "org" + (i + 1);
             if (sharedPref.contains(key)) {
-                mTotalScore += sharedPref.getInt(key, 0);
+                totalScore += sharedPref.getInt(key, 0);
             } else {
                 break;
             }
         }
+
+        return totalScore;
     }
 }
