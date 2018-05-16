@@ -61,6 +61,14 @@ public class FinalResultActivity extends AppCompatActivity {
 
     private void updateTextFields() {
         int descriptorIndices = getIndex();
+
+        mResultColourDescriptor.setText(
+                getResources().getString(mDescriptorTitles[descriptorIndices])
+        );
+
+        mResultLongText.setText(
+                getResources().getString(mDescriptorTexts[descriptorIndices])
+        );
     }
 
     private int getIndex() {
