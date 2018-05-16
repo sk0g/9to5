@@ -95,7 +95,7 @@ public class MeResultsActivity extends AppCompatActivity {
         startActivity(quizIntent);
     }
 
-    private static int getTotalMeScore(Context context) {
+    static int getTotalMeScore(Context context) {
         SharedPreferences sharedPref = context.getSharedPreferences(
                 ME_PREFS_NAME, Context.MODE_PRIVATE
         );

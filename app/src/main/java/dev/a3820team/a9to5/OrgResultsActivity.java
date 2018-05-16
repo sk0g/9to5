@@ -95,7 +95,7 @@ public class OrgResultsActivity extends AppCompatActivity {
         startActivity(quizIntent);
     }
 
-    private static int getTotalOrgScore(Context context) {
+    static int getTotalOrgScore(Context context) {
         SharedPreferences sharedPref = context.getSharedPreferences(
                 ME_PREFS_NAME, Context.MODE_PRIVATE
         );
