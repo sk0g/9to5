@@ -6,9 +6,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorButton">#653F66</color>
     <color name="colorText">#3A3555</color>
-    <color name="customGreen">#32CD32</color>
-    <color name="customRed">#DF173F</color>
-    <color name="customYellow">#F0E68C</color>
+    <color name="customGreen">#AECB6C</color>
+    <color name="customRed">#D74F4F</color>
+    <color name="customYellow">#FFB759</color>
     <color name="colorDangerRed">#EA2212</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBackgroundGray">#EDEDED</color>
