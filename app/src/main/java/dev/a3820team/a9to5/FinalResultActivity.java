@@ -56,6 +56,7 @@ public class FinalResultActivity extends AppCompatActivity {
         mMeScore  = getTotalMeScore(getApplicationContext());
         mOrgScore = getTotalOrgScore(getApplicationContext());
 
+        updateSemiCircleColours();
         updateTextFields();
     }
 
@@ -69,6 +70,10 @@ public class FinalResultActivity extends AppCompatActivity {
         mResultLongText.setText(
                 getResources().getString(mDescriptorTexts[descriptorIndices])
         );
+    }
+
+    private void updateSemiCircleColours() {
+
     }
 
     private int getIndex() {
