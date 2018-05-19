@@ -46,9 +46,7 @@ public class FinalResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_final_result);
 
         mTopSemiCircle    = (ImageView) findViewById(R.id.final_result_top_semi_circle);
-        mTopSemiCircle.setColorFilter(getResources().getColor(R.color.customYellow));
         mBottomSemiCircle = (ImageView) findViewById(R.id.final_result_bottom_semi_circle);
-        mBottomSemiCircle.setColorFilter(getResources().getColor(R.color.customGreen));
 
         mResultColourDescriptor = (TextView) findViewById(R.id.final_result_colour_descriptor);
         mResultLongText = (TextView) findViewById(R.id.final_result_long_text);
@@ -73,7 +71,22 @@ public class FinalResultActivity extends AppCompatActivity {
     }
 
     private void updateSemiCircleColours() {
+        int topColourID, bottomColourID;
 
+        topColourID = getBoxColour(mMeScore);
+        bottomColourID = getBoxColour(mOrgScore);
+
+        mTopSemiCircle.setColorFilter(getResources().getColor(topColourID));
+        mBottomSemiCircle.setColorFilter(getResources().getColor(bottomColourID));
+    }
+
+    private int getBoxColour(int score) {
+        int colourID;
+        if (score <= 35) { colourID = R.color.customRed; }
+        else if (score <= 50) { colourID = R.color.customYellow; }
+        else { colourID = R.color.customGreen; }
+
+        return colourID;
     }
 
     private int getIndex() {
