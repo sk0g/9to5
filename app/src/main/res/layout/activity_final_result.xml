@@ -16,6 +16,7 @@
             android:id="@+id/final_result_top_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:textAlignment="center"
             android:text="@string/title_my_view_of_me"/>
 
@@ -23,20 +24,21 @@
             android:id="@+id/final_result_top_semi_circle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:src="@drawable/top_semi_circle"/>
 
         <ImageView
             android:id="@+id/final_result_bottom_semi_circle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:src="@drawable/bottom_semi_circle"/>
 
         <TextView
             android:id="@+id/final_result_bottom_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="8dp"
             android:textAlignment="center"
             android:text="@string/title_the_organizational_colonoscopy"/>
 

@@ -1,9 +1,12 @@
 package dev.a3820team.a9to5;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +17,7 @@ public class FinalResultActivity extends AppCompatActivity {
 
     ImageView mTopSemiCircle, mBottomSemiCircle;
     TextView mResultColourDescriptor, mResultLongText;
+    Button mPreviousButton;
     int mMeScore, mOrgScore;
 
     final int[] mDescriptorTitles = {
@@ -54,6 +58,14 @@ public class FinalResultActivity extends AppCompatActivity {
         mMeScore  = getTotalMeScore(getApplicationContext());
         mOrgScore = getTotalOrgScore(getApplicationContext());
 
+        mPreviousButton = (Button) findViewById(R.id.final_result_activity_previous_button);
+        mPreviousButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchToOrgResults();
+            }
+        });
+
         updateSemiCircleColours();
         updateTextFields();
     }
@@ -62,11 +74,11 @@ public class FinalResultActivity extends AppCompatActivity {
         int descriptorIndices = getIndex();
 
         mResultColourDescriptor.setText(
-                getResources().getString(mDescriptorTitles[descriptorIndices])
+                getResources().getText(mDescriptorTitles[descriptorIndices])
         );
 
         mResultLongText.setText(
-                getResources().getString(mDescriptorTexts[descriptorIndices])
+                getResources().getText(mDescriptorTexts[descriptorIndices])
         );
     }
 
@@ -105,5 +117,10 @@ public class FinalResultActivity extends AppCompatActivity {
         else if (mMeScore <= 50) { result += 1; }
 
         return result;
+    }
+
+    private void switchToOrgResults() {
+        Intent quizIntent = new Intent(this, OrgResultsActivity.class);
+        startActivity(quizIntent);
     }
 }
