@@ -24,8 +24,10 @@
             android:id="@+id/final_result_top_semi_circle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="1dp"
             android:layout_weight="3"
             android:src="@drawable/top_semi_circle"/>
+
 
         <ImageView
             android:id="@+id/final_result_bottom_semi_circle"
