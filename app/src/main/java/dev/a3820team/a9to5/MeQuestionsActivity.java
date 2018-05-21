@@ -17,7 +17,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
     public static final String ME_PREFS_PREFIX = "me";
 
     Button mSubmitButton, mPreviousButton;
-    final int[] mRadioGroupID = {
+    static final int[] mRadioGroupID = {
             R.id.me_radio_group_1,  R.id.me_radio_group_2,  R.id.me_radio_group_3,  R.id.me_radio_group_4,
             R.id.me_radio_group_5,  R.id.me_radio_group_6,  R.id.me_radio_group_7,  R.id.me_radio_group_8,
             R.id.me_radio_group_9,  R.id.me_radio_group_10, R.id.me_radio_group_11, R.id.me_radio_group_12,
@@ -25,7 +25,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
             R.id.me_radio_group_17, R.id.me_radio_group_18, R.id.me_radio_group_19, R.id.me_radio_group_20
     };
 
-    final int[] mQuestionTextViews = {
+    static final int[] mQuestionTextViews = {
             R.id.me_question_1,  R.id.me_question_2,  R.id.me_question_3,  R.id.me_question_4,
             R.id.me_question_5,  R.id.me_question_6,  R.id.me_question_7,  R.id.me_question_8,
             R.id.me_question_9,  R.id.me_question_10, R.id.me_question_11, R.id.me_question_12,
@@ -33,7 +33,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
             R.id.me_question_17, R.id.me_question_18, R.id.me_question_19, R.id.me_question_20
     };
 
-    public final int mQuestionAmount = mRadioGroupID.length;
+    public static final int mQuestionAmount = mRadioGroupID.length;
 
     int[] mSelectedOptions = new int[mQuestionAmount];
 
