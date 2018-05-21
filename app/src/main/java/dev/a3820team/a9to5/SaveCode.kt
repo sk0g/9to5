@@ -1,9 +1,11 @@
 package dev.a3820team.a9to5
-
 import android.content.Context
+import dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_PREFIX
+import dev.a3820team.a9to5.OrgQuestionsActivity.ORG_PREFS_PREFIX
 
 class SaveCode {
-
+    val ME_PREFIX  = ME_PREFS_PREFIX
+    val ORG_PREFIX = ORG_PREFS_PREFIX
 
     fun isValidCode(code: String ): Boolean {
         // Returns whether a code is valid or not
