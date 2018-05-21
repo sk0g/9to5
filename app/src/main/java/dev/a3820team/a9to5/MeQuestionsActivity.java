@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class MeQuestionsActivity extends AppCompatActivity {
 
     public static final String ME_PREFS_NAME = "dev.a3820team.a9to5.me_questions";
+    public static final String ME_PREFS_PREFIX = "me";
 
     Button mSubmitButton, mPreviousButton;
     final int[] mRadioGroupID = {
@@ -73,7 +74,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
         String key;
         int checked, radioButtonID;
         for (int i = 0; i > -1; i++) {
-            key = "me" + (i + 1);
+            key = ME_PREFS_PREFIX + (i + 1);
             if (sharedPref.contains(key)) {
                 checked = sharedPref.getInt(key, 0);
                 RadioGroup rg = findViewById(mRadioGroupID[i]);
@@ -111,7 +112,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
         String key;
 
         for (int i = 0; i < mQuestionAmount; i++) {
-            key = "me" + (i + 1);
+            key = ME_PREFS_PREFIX + (i + 1);
             editor.putInt(key, mSelectedOptions[i]);
         }
 
