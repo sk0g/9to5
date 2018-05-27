@@ -5,13 +5,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
 
@@ -50,13 +48,19 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsMenuItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.welcome_screen_read_code_button) {
-            // TODO: process read_code_button
+            read_code();
             return true;
         }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private boolean read_code() {
+        return true;
     }
 
     void switchToQuiz() {
