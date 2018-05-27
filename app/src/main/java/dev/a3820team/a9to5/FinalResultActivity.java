@@ -66,8 +66,8 @@ public class FinalResultActivity extends AppCompatActivity {
             }
         });
 
-        updateSemiCircleColours();
         updateTextFields();
+        updateSemiCircleColours();
     }
 
     private void updateTextFields() {
@@ -114,7 +114,7 @@ public class FinalResultActivity extends AppCompatActivity {
         else if (mMeScore <= 50) { result += 3; }
 
         if (mOrgScore <= 35) { result += 2; }
-        else if (mMeScore <= 50) { result += 1; }
+        else if (mOrgScore <= 50) { result += 1; }
 
         return result;
     }
