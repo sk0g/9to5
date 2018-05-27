@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -39,6 +41,22 @@ public class WelcomeActivity extends AppCompatActivity {
                 switchToQuiz();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_welcome_screen, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsMenuItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.welcome_screen_read_code_button) {
+            // TODO: process read_code_button
+            return true;
+        }
     }
 
     void switchToQuiz() {
