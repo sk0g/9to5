@@ -36,6 +36,8 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="imageAsset" value="D:\Downloads\baseline-save-android-black\drawable-xxxhdpi\baseline_save_white_48.png" />
                                       <entry key="outputName" value="ic_save" />
+                                      <entry key="theme" value="CUSTOM" />
+                                      <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -64,11 +66,22 @@
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
                                       <entry key="foregroundImage" value="D:\Downloads\baseline-save-android-black\drawable-xxxhdpi\baseline_save_white_48.png" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="generateLegacyIcon" value="false" />
-                                      <entry key="generateRoundIcon" value="false" />
-                                      <entry key="generateWebIcon" value="false" />
                                       <entry key="outputName" value="ic_save" />
                                       <entry key="previewDensity" value="MEDIUM" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="iconShape" value="HRECT" />
+                                      <entry key="imageAsset" value="D:\Drive\3820ICT 9to5 Project\Design\Logo\XXXHDPI-logo.png" />
+                                      <entry key="outputName" value="ic_welcome_logo" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -78,7 +91,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
+                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>
