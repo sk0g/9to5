@@ -58,7 +58,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
         mPreviousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showConfirmationDialog(view);
+                showConfirmationDialog();
             }
         });
     }
@@ -170,9 +170,10 @@ public class MeQuestionsActivity extends AppCompatActivity {
         }
     }
 
-    public void showConfirmationDialog(View view) {
+    public void showConfirmationDialog() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        setTheme(R.style.CustomColourScheme);
         builder.setTitle(R.string.start_over_confirmation_title);
         builder.setMessage(R.string.start_over_confirmation_body);
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +20,7 @@ import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    Button mStartQuizButton;
+    Button mStartQuizButton, mMenuButton;
     TextView mMainText;
 
     @Override
@@ -44,6 +45,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_welcome_screen, menu);
+
         return true;
     }
 
@@ -52,15 +54,11 @@ public class WelcomeActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.welcome_screen_read_code_button) {
-            read_code();
+            showCodeReadScreen();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    private boolean read_code() {
-        return true;
     }
 
     void switchToQuiz() {
@@ -76,5 +74,18 @@ public class WelcomeActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.clear();
         editor.apply();
+    }
+
+    public void showCodeReadScreen() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        setTheme(R.style.CustomColourScheme);
+        builder.setTitle("Restore Progress from Code");
+        builder.setMessage("Please enter the save code below");
+
+        builder.setPositiveButton("Read Code", null);
+        builder.setNegativeButton(R.string.confirmation_screen_cancel, null);
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
