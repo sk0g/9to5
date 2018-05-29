@@ -30,22 +30,22 @@ object SaveCode {
         // Returns a string, containing sharedPreference values in encoded form
         var code = ""
 
-        var sp = context.getSharedPreferences(
+        val sp = context.getSharedPreferences(
                 ME_PREFS_NAME, Context.MODE_PRIVATE)
 
-        var temporary_array: Array<Int>
+        var temporaryArray: Array<Int>
         var currentLetter: Char
         for (i in 1..20 step 2) {
             // Iterates through the array, two indices at a time, and fills the temp_array with:
             // me[i], org[i], me[i+1], org[i+1]
-            temporary_array = arrayOf(0, 0, 0, 0)
+            temporaryArray = arrayOf(0, 0, 0, 0)
 
-            temporary_array[0] = sp.getInt(ME_PREFIX + i, 1)
-            temporary_array[1] = sp.getInt(ORG_PREFIX + i, 1)
-            temporary_array[2] = sp.getInt(ME_PREFIX + (i + 1), 1)
-            temporary_array[3] = sp.getInt(ORG_PREFIX + (i + 1), 1)
+            temporaryArray[0] = sp.getInt(ME_PREFIX + i, 1)
+            temporaryArray[1] = sp.getInt(ORG_PREFIX + i, 1)
+            temporaryArray[2] = sp.getInt(ME_PREFIX + (i + 1), 1)
+            temporaryArray[3] = sp.getInt(ORG_PREFIX + (i + 1), 1)
 
-            currentLetter = encode(temporary_array)
+            currentLetter = encode(temporaryArray)
             code += currentLetter
         }
 
@@ -55,10 +55,31 @@ object SaveCode {
     fun loadCode(context: Context, code: String): Boolean {
         // Attempts to lead the code into sharedPreference values
         // Returns whether the loading operation was successful
-        return false
+        if (!isValidCode(code)) { return false }
+
+        val sp = context.getSharedPreferences(
+                ME_PREFS_NAME, Context.MODE_PRIVATE)
+        val editor = sp.edit()
+        editor.clear()
+
+        var counter = 1
+        var temporaryArray: Array<Int>
+        for (selectedCharacter in code) {
+            temporaryArray = decode(selectedCharacter)
+
+            editor.putInt(ME_PREFIX + counter, temporaryArray[0])
+            editor.putInt(ORG_PREFIX + (counter + 1), temporaryArray[1])
+            editor.putInt(ME_PREFIX + counter, temporaryArray[2])
+            editor.putInt(ORG_PREFIX + (counter + 1), temporaryArray[3])
+
+            counter += 2
+        }
+
+        editor.apply()
+        return true
     }
 
-    fun encode(values: Array<Int>): Char {
+    private fun encode(values: Array<Int>): Char {
         // Returns a letter, given an int array
         // The array must contain 4 elements, each element being one of: 1, 2, or 3
         var index = 0
