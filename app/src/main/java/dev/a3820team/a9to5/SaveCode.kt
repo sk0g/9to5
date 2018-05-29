@@ -37,4 +37,17 @@ object SaveCode {
         // Returns whether the loading operation was successful
         return false
     }
+
+    fun encode(values: Array<Int>): Char {
+        // Returns a letter, given an int array
+        // The array must contain 4 elements, each element being one of: 1, 2, or 3
+        var index = 0
+
+        index += 27 * (values[0] - 1)
+        index += 9 * (values[1] - 1)
+        index += 3 * (values[2] - 1)
+        index += 1 * (values[3] - 1)
+
+        return VALID_CHARACTERS[index]
+    }
 }
