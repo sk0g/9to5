@@ -57,8 +57,8 @@ object SaveCode {
         var values = arrayOf(0, 0, 0, 0)
         var index = 0
 
-        for (i in VALID_CHARACTERS.indices) {
-            if (VALID_CHARACTERS[i].equals(letter))
+        for ((i, value) in VALID_CHARACTERS.withIndex()) {
+            if (value.equals(letter))
                 index = i
         }
 
