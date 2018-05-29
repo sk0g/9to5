@@ -1,8 +1,10 @@
 package dev.a3820team.a9to5;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -166,5 +168,31 @@ public class MeQuestionsActivity extends AppCompatActivity {
 
             tv.setTextColor(newTextColour);
         }
+    }
+
+    public void showConfirmationDialog(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.start_over_confirmation_title);
+        builder.setMessage(R.string.start_over_confirmation_body);
+
+        final AlertDialog dialog = builder.create();
+
+        builder.setPositiveButton("Start Over", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialog.cancel();
+                startQuizOver();
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialog.cancel();
+            }
+        });
+
+        dialog.show();
     }
 }
