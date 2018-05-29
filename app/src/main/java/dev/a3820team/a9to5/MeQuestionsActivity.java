@@ -58,7 +58,7 @@ public class MeQuestionsActivity extends AppCompatActivity {
         mPreviousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startQuizOver();
+                showConfirmationDialog(view);
             }
         });
     }
@@ -176,23 +176,16 @@ public class MeQuestionsActivity extends AppCompatActivity {
         builder.setTitle(R.string.start_over_confirmation_title);
         builder.setMessage(R.string.start_over_confirmation_body);
 
-        final AlertDialog dialog = builder.create();
-
-        builder.setPositiveButton("Start Over", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.confirmation_screen_start_over, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                dialog.cancel();
                 startQuizOver();
             }
         });
 
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialog.cancel();
-            }
-        });
+        builder.setNegativeButton(R.string.confirmation_screen_cancel, null);
 
+        final AlertDialog dialog = builder.create();
         dialog.show();
     }
 }
