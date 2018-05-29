@@ -6,10 +6,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
@@ -84,6 +86,10 @@ public class WelcomeActivity extends AppCompatActivity {
 
         builder.setPositiveButton("Read Code", null);
         builder.setNegativeButton(R.string.confirmation_screen_cancel, null);
+
+        final EditText input = new EditText(this);
+        input.setInputType(InputType.TYPE_CLASS_TEXT);
+        builder.setView(input);
 
         final AlertDialog dialog = builder.create();
         dialog.show();
