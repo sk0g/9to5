@@ -1,7 +1,6 @@
 package dev.a3820team.a9to5
 import android.content.Context
-import dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_PREFIX
-import dev.a3820team.a9to5.MeQuestionsActivity.mQuestionAmount
+import dev.a3820team.a9to5.MeQuestionsActivity.*
 import dev.a3820team.a9to5.OrgQuestionsActivity.ORG_PREFS_PREFIX
 
 object SaveCode {
@@ -29,7 +28,28 @@ object SaveCode {
 
     fun generateCode(context: Context): String {
         // Returns a string, containing sharedPreference values in encoded form
-        return ""
+        var code = ""
+
+        var sp = context.getSharedPreferences(
+                ME_PREFS_NAME, Context.MODE_PRIVATE)
+
+        var temporary_array: Array<Int>
+        var currentLetter: Char
+        for (i in 1..20 step 2) {
+            // Iterates through the array, two indices at a time, and fills the temp_array with:
+            // me[i], org[i], me[i+1], org[i+1]
+            temporary_array = arrayOf(0, 0, 0, 0)
+
+            temporary_array[0] = sp.getInt(ME_PREFIX + i, 1)
+            temporary_array[1] = sp.getInt(ORG_PREFIX + i, 1)
+            temporary_array[2] = sp.getInt(ME_PREFIX + (i + 1), 1)
+            temporary_array[3] = sp.getInt(ORG_PREFIX + (i + 1), 1)
+
+            currentLetter = encode(temporary_array)
+            code += currentLetter
+        }
+
+        return code
     }
 
     fun loadCode(context: Context, code: String): Boolean {
@@ -58,7 +78,7 @@ object SaveCode {
         var index = 0
 
         for ((i, value) in VALID_CHARACTERS.withIndex()) {
-            if (value.equals(letter))
+            if (value == letter)
                 index = i
         }
 
