@@ -1,10 +1,11 @@
 package dev.a3820team.a9to5;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import static dev.a3820team.a9to5.MeResultsActivity.getTotalMeScore;
 import static dev.a3820team.a9to5.OrgResultsActivity.getTotalOrgScore;
+import static dev.a3820team.a9to5.SaveCode.generateCode;
 
 public class FinalResultActivity extends AppCompatActivity {
 
@@ -70,6 +72,25 @@ public class FinalResultActivity extends AppCompatActivity {
         updateSemiCircleColours();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_final_results, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.final_result_view_code_button) {
+            showCodeScreen();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     private void updateTextFields() {
         int descriptorIndices = getIndex();
 
@@ -122,5 +143,16 @@ public class FinalResultActivity extends AppCompatActivity {
     private void switchToOrgResults() {
         Intent quizIntent = new Intent(this, OrgResultsActivity.class);
         startActivity(quizIntent);
+    }
+
+    public void showCodeScreen() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(generateCode(this));
+        builder.setMessage(getString(R.string.final_result_popup_body_text));
+
+        builder.setPositiveButton("Close", null);
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
