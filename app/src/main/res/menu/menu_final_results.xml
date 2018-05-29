@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".FinalResultActivity">
+
+    <item
+        android:id="@+id/final_result_view_code_button"
+        android:icon="@drawable/ic_save"
+        android:orderInCategory="100"
+        android:title="@string/welcome_screen_menu_read_code"
+        app:showAsAction="always" />
+
+</menu>
