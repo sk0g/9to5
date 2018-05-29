@@ -1,11 +1,13 @@
 package dev.a3820team.a9to5;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
 
@@ -22,7 +25,7 @@ import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    Button mStartQuizButton, mMenuButton;
+    Button mStartQuizButton;
     TextView mMainText;
 
     @Override
@@ -82,16 +85,35 @@ public class WelcomeActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         setTheme(R.style.CustomColourScheme);
         builder.setTitle("Restore Progress from Code");
-        builder.setMessage("Please enter the save code below");
-
-        builder.setPositiveButton("Read Code", null);
-        builder.setNegativeButton(R.string.confirmation_screen_cancel, null);
+        builder.setMessage("Please enter the save code below \nRemember, the code is case sensitive!");
 
         final EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
+        input.setFilters(new InputFilter[] {new InputFilter.LengthFilter(10)}); // max length
+
+        builder.setPositiveButton("Read Code", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                read_code(input.getText().toString());
+            }
+        });
+        builder.setNegativeButton(R.string.confirmation_screen_cancel, null);
+
         builder.setView(input);
 
         final AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    public boolean read_code(String code) {
+        boolean valid = true;
+
+        if (valid) {
+            Toast.makeText(this, "Code successfully loaded!", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Invalid code", Toast.LENGTH_LONG).show();
+        }
+        return true;
+    }
+
 }
