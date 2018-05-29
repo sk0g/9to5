@@ -50,4 +50,26 @@ object SaveCode {
 
         return VALID_CHARACTERS[index]
     }
+
+    fun decode(letter: Char): Array<Int> {
+        // Accepts a letter, returns an int array
+        // The int array must have 4 values, each being one of: 1, 2, or 3
+        var values = arrayOf(0, 0, 0, 0)
+        var index = 0
+
+        for (i in VALID_CHARACTERS.indices) {
+            if (VALID_CHARACTERS[i].equals(letter))
+                index = i
+        }
+
+        var currentNum: Int
+        for (i in 0..3) {
+            currentNum = (index % 3) + 1
+            values[3 - i] = currentNum
+
+            index /= 3
+        }
+
+        return values
+    }
 }
