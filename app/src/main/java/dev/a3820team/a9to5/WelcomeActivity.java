@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static dev.a3820team.a9to5.MeQuestionsActivity.ME_PREFS_NAME;
-import static dev.a3820team.a9to5.SaveCode.isValidCode;
+import static dev.a3820team.a9to5.SaveCode.loadCode;
 
 /**
  * Created by sk0g on 10/04/2018.
@@ -107,7 +107,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public boolean read_code(String code) {
-        boolean valid = isValidCode(code);
+        boolean valid = loadCode(this, code);
 
         if (valid) {
             Toast.makeText(this, "Code successfully loaded!", Toast.LENGTH_LONG).show();
