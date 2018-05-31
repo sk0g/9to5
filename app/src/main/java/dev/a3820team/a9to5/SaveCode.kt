@@ -100,8 +100,10 @@ object SaveCode {
         var index = 0
 
         for ((i, value) in VALID_CHARACTERS.withIndex()) {
-            if ( value == letter)
+            if ( value == letter) {
                 index = i
+                break
+            }
         }
 
         var currentNum: Int
