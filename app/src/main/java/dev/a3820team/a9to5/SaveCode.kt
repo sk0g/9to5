@@ -13,7 +13,7 @@ object SaveCode {
     private fun isValidCode(code: String ): Boolean {
         var isValid = true
 
-        if (code.length != 10)
+        if (code.length != (QUESTION_AMOUNT / 2))
             isValid = false
         else {
             for (currentCharacter in code) {

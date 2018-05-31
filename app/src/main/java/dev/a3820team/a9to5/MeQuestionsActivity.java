@@ -44,6 +44,8 @@ public class MeQuestionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_questions);
 
+        final Context context = this;
+
         attemptLoadingResults();
 
         mSubmitButton = (Button) findViewById(R.id.activity_me_next_button);
@@ -58,14 +60,14 @@ public class MeQuestionsActivity extends AppCompatActivity {
         mPreviousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showConfirmationDialog();
+                showConfirmationDialog(context);
             }
         });
     }
 
-    private void startQuizOver() {
-        Intent startQuizOverIntent = new Intent(this, WelcomeActivity.class);
-        startActivity(startQuizOverIntent);
+    private static void startQuizOver(Context context) {
+        Intent startQuizOverIntent = new Intent(context, WelcomeActivity.class);
+        context.startActivity(startQuizOverIntent);
     }
 
     private void attemptLoadingResults() {
@@ -170,17 +172,16 @@ public class MeQuestionsActivity extends AppCompatActivity {
         }
     }
 
-    public void showConfirmationDialog() {
+    public static void showConfirmationDialog(final Context context) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        setTheme(R.style.CustomColourScheme);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(R.string.start_over_confirmation_title);
         builder.setMessage(R.string.start_over_confirmation_body);
 
         builder.setPositiveButton(R.string.confirmation_screen_start_over, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startQuizOver();
+                startQuizOver(context);
             }
         });
 

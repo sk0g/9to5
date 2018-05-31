@@ -79,6 +79,15 @@
                 android:text="@string/previous_button_text"
                 android:textColor="@color/colorButton"/>
 
+            <Button
+                android:id="@+id/final_result_start_over"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/drawable_low_emphasis"
+                android:text="@string/button_label_start_over"
+                android:textColor="@color/colorButton"/>
+
         </LinearLayout>
 
     </LinearLayout>

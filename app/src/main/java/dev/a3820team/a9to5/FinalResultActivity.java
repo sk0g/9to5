@@ -1,5 +1,6 @@
 package dev.a3820team.a9to5;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static dev.a3820team.a9to5.MeQuestionsActivity.showConfirmationDialog;
 import static dev.a3820team.a9to5.MeResultsActivity.getTotalMeScore;
 import static dev.a3820team.a9to5.OrgResultsActivity.getTotalOrgScore;
 import static dev.a3820team.a9to5.SaveCode.generateCode;
@@ -19,7 +21,7 @@ public class FinalResultActivity extends AppCompatActivity {
 
     ImageView mTopSemiCircle, mBottomSemiCircle;
     TextView mResultColourDescriptor, mResultLongText;
-    Button mPreviousButton;
+    Button mPreviousButton, mStartOverButton;
     int mMeScore, mOrgScore;
 
     final int[] mDescriptorTitles = {
@@ -65,6 +67,16 @@ public class FinalResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 switchToOrgResults();
+            }
+        });
+
+        final Context context = this;
+
+        mStartOverButton = (Button) findViewById(R.id.final_result_start_over);
+        mStartOverButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showConfirmationDialog(context);
             }
         });
 
