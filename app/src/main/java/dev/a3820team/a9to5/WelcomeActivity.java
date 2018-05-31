@@ -115,5 +115,4 @@ public class WelcomeActivity extends AppCompatActivity {
             Toast.makeText(this, "Invalid code", Toast.LENGTH_SHORT).show();
         }
     }
-
 }
