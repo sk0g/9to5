@@ -106,15 +106,14 @@ public class WelcomeActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public boolean read_code(String code) {
+    public void read_code(String code) {
         boolean valid = loadCode(this, code);
 
         if (valid) {
-            Toast.makeText(this, "Code successfully loaded!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Code successfully loaded!", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Invalid code", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Invalid code", Toast.LENGTH_SHORT).show();
         }
-        return true;
     }
 
 }
