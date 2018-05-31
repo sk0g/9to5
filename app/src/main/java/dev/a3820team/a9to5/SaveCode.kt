@@ -4,10 +4,10 @@ import dev.a3820team.a9to5.MeQuestionsActivity.*
 import dev.a3820team.a9to5.OrgQuestionsActivity.ORG_PREFS_PREFIX
 
 object SaveCode {
-    val ME_PREFIX  = ME_PREFS_PREFIX
-    val ORG_PREFIX = ORG_PREFS_PREFIX
-    val QUESTION_AMOUNT = mQuestionAmount
-    val VALID_CHARACTERS = arrayOf('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '-', '+', '=', '!', '@',
+    private const val ME_PREFIX  = ME_PREFS_PREFIX
+    private const val ORG_PREFIX = ORG_PREFS_PREFIX
+    private val QUESTION_AMOUNT = mQuestionAmount
+    private val VALID_CHARACTERS = arrayOf('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '-', '+', '=', '!', '@',
         '#', '$', '%', '^', '&', '*', '(', ')', '<', '>', ';', '/', '?', '|')
 
     private fun isValidCode(code: String ): Boolean {
@@ -35,7 +35,7 @@ object SaveCode {
 
         var temporaryArray: Array<Int>
         var currentLetter: Char
-        for (i in 1..20 step 2) {
+        for (i in 1..QUESTION_AMOUNT step 2) {
             // Iterates through the array, two indices at a time, and fills the temp_array with:
             // me[i], org[i], me[i+1], org[i+1]
             temporaryArray = arrayOf(0, 0, 0, 0)
@@ -100,7 +100,7 @@ object SaveCode {
         var index = 0
 
         for ((i, value) in VALID_CHARACTERS.withIndex()) {
-            if ( value == letter) {
+            if (value == letter) {
                 index = i
                 break
             }
