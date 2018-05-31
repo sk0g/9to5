@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomColourScheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,18 +20,23 @@
         </activity>
         <activity
             android:name=".MeQuestionsActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/CustomColourScheme" />
         <activity
             android:name=".MeResultsActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/CustomColourScheme" />
         <activity
             android:name=".OrgQuestionsActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/CustomColourScheme" />
         <activity
             android:name=".OrgResultsActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/CustomColourScheme" />
         <activity
             android:name=".FinalResultActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/CustomColourScheme"/>
 
     </application>
